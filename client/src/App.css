@@ -2,6 +2,124 @@ body {
   text-align: center;
 }
 
+header {
+  padding: 1rem 0rem;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+}
+
+header button {
+  all: unset;
+  background-color:rgba(100, 100, 100, 0.2);
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+header button:hover {
+  background-color:rgba(100, 100, 100, 0.4);
+  cursor: pointer;;
+}
+
+.blog-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;;
+  justify-content: center;
+  align-items:center;
+  margin-top: 80px;
+}
+
+.header-wrapper {
+  width:100%;
+  position: relative;
+}
+
+.header-wrapper h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .header-img {
   width: 100%;
+}
+
+.blog-body {
+  width: 50%;
+  min-width: 40rem;
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.create-blog-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: rgba(100, 100, 100, 0.2);
+}
+
+.create-blog-wrapper {
+  text-align:left;
+  width: 20rem;
+  height: 60%;
+  background-color: white;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+form > label {
+  margin-bottom: 0.2rem;
+}
+
+form > *:not(label) {
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 20rem;
+  height: 5rem;
+}
+
+input {
+  width: 20rem;
+}
+
+.submit-button {
+  max-width: 20rem;
+}
+
+.close-button-wrapper {
+  width: 100%;
+  text-align: right;
+  font-size: 2rem;
+}
+
+.close-button-wrapper:hover {
+  cursor: pointer;
+}
+
+.close-button {
+  all: unset;
 }
