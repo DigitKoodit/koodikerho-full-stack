@@ -8,7 +8,6 @@ Each member can fork this project and use it as a template for their Full Stack 
 
 Built with Javascript and React. Backend is built with NodeJs and ExpressJs and for the database postgreSQL is used.
 
-
 ## Roadmap
 
 - Build frontend
@@ -34,9 +33,9 @@ Open http://localhost:3000 with your browser to see the result.
 
 Server:
 ```bash
-cd koodikerho-full-stack/server
-npm install
-npm run start
+  cd koodikerho-full-stack/server
+  npm install
+  npm run start
 ```
 ## License
 
