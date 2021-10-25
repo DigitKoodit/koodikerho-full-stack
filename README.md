@@ -1,7 +1,43 @@
-# koodikerho-full-stack
+# Koodikerho Full Stack
 
-Täältä löydät pohjat sekä frontendille, että backendille.
+Koodikerho Full Stack is a project template for members of digit ry
 
-Frontend löytyy kansiosta client jonka voi käynnistää ajamalla komennon: `npm start`. Frontend käyttää ReactJs teknologiaa josta voi lukea lisää täältä [ReactJs frontpage](https://reactjs.org/)
+Each member can fork this project and use it as a template for their Full Stack applications
 
-Backend löytyy kansiosta server ja sen voi käynnistää komennolla `npm start`
+## Tech Stack
+
+Built with Javascript and React. Backend is built with NodeJs and ExpressJs and for the database postgreSQL is used.
+
+
+## Roadmap
+
+- Build frontend
+
+- Build backend
+
+- Connect to database
+
+- Deploy to heroku
+
+## Installation
+
+Clone the repository in your preferred way.
+
+Client: 
+```bash
+  cd koodikerho-full-stack/client
+  npm install
+  npm run start
+```
+
+Open http://localhost:3000 with your browser to see the result.
+
+Server:
+```bash
+cd koodikerho-full-stack/server
+npm install
+npm run start
+```
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
