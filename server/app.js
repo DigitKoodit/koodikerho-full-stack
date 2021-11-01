@@ -4,16 +4,20 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+// Routers
 const indexRouter = require('./routes/index');
 
+// initialize express
 const app = express();
 
+// Add middlwares
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// Routes
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
