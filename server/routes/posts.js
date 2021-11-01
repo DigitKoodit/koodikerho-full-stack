@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
 
 router.post("/", (req, res, next) => {
   if (!req.body.post) {
-    res.sendStatus(400);
+    res.status(400).send(req.body);
     return;
   }
   posts.push(req.body.post);
