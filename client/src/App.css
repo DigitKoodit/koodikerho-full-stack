@@ -1,40 +1,56 @@
-.App {
+body {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  padding: 1rem 0rem;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header button {
+  all: unset;
+  background-color:rgba(100, 100, 100, 0.2);
+  padding: 1rem;
+  margin-right: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header button:hover {
+  background-color:rgba(100, 100, 100, 0.4);
+  cursor: pointer;;
+}
+
+.blog-wrapper {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items:center;
+  margin-top: 80px;
+}
+
+.header-wrapper {
+  width:100%;
+  position: relative;
+}
+
+.header-wrapper h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
   color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-img {
+  width: 100%;
 }
 
 .blog-body {
