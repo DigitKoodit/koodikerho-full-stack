@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:4242/posts");
+        const res = await fetch("/posts");
         const { data } = await res.json();
 
         setPosts(data);
@@ -26,7 +26,7 @@ function App() {
 
   const handleAddNewPost = async(obj) => {
     try {
-      const res = await fetch("http://localhost:4242/posts", {
+      const res = await fetch("/posts", {
         method: 'POST',
         body: JSON.stringify({post: obj}),
         headers: { 'Content-Type': "application/json" }
