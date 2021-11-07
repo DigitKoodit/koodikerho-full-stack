@@ -1,23 +1,21 @@
-import { Client } from "pg";
+const { Client } = require("pg");
 
-export const createClient = (options) => {
-  const client = new Client();
+const createClient = (options) => {
+  const client = new Client({ssl: { rejectUnauthorized: false }});
+  
+    client.connect().then(res => {
+      console.log("Init client")
+      const createTable = `CREATE TABLE IF NOT EXISTS "posts" (
+        "id" SERIAL,
+        "img" VARCHAR(64) NOT NULL,
+        "title" VARCHAR(64) NOT NULL,
+        "body" TEXT NOT NULL,
+        PRIMARY KEY ("id")
+      );`
+      client.query(createTable)
+    }).catch(err => console.log(err))
 
-  try {
-    // Create posts table if it doesn't exists
-    const createTable = `CREATE TABLE IF NOT EXISTS "posts" (
-	    "id" SERIAL,
-	    "name" VARCHAR(100) NOT NULL,
-	    "role" VARCHAR(15) NOT NULL,
-	    PRIMARY KEY ("id")
-    );`
-    client.query()
-
-  } catch(err) {
-
-  }
-
-  return {
-    query: (q, params) => client.query(q, params)
-  }
+  return client
 }
+
+exports.createClient = createClient;
