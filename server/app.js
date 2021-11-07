@@ -3,6 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+require('dotenv').config()
+
 
 // Routers
 const indexRouter = require('./routes/index');
