@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "heroku-prebuild": "cd client && npm ci && npm run build && cd ..",
-    "heroku-postbuild": "cd server && npm ci && npm run start"
+    "heroku-postbuild": "cd server && npm ci && cd ..",
+    "start": "cd server && npm run start"
   }
 }
