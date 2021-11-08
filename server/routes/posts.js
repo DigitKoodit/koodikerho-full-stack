@@ -15,7 +15,6 @@ router.post("/", async (req, res, next) => {
     res.status(400).send(req.body);
     return;
   }
-  posts.push(req.body.post);
 
   const { headerImg, title, body } = req.body.post;
 
