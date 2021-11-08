@@ -16,10 +16,10 @@ router.post("/", async (req, res, next) => {
     return;
   }
 
-  const { headerImg, title, body } = req.body.post;
+  const { img, title, body } = req.body.post;
 
   const t = "INSERT INTO posts(img, title, body) VALUES($1, $2, $3) RETURNING *"
-  const r = await client.query(t, [headerImg, title, body]);
+  const r = await client.query(t, [img, title, body]);
   res.status(200).send({ type: "BlogPost", data: r.rows });
 })
 

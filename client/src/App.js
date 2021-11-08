@@ -34,9 +34,9 @@ function App() {
         const { data } = await res.json();
 
         setPosts(data);
-  } catch (err) {
-
-  }
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   return (
@@ -45,7 +45,7 @@ function App() {
         <button onClick={() =>setModalOpen(true)}>Lisää postaus</button>
       </header>
       {posts.map((post, index) =>
-        <BlogCard headerImg={post.headerImg} title={post.title} body={post.body} key={index} />
+        <BlogCard img={post.img} title={post.title} body={post.body} key={index} />
       )}
       {modalOpen && <CreateBlogModal createPost={(obj) => handleAddNewPost(obj)} closeModal={() => setModalOpen(false)} />}
     </div>

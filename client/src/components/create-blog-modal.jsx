@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 const CreateBlogModal = ({ createPost, closeModal }) => {
 
   const [state, setState] = useState({
-    headerImg: "",
+    img: "",
     title: "",
     body: "",
   });
@@ -22,12 +22,12 @@ const CreateBlogModal = ({ createPost, closeModal }) => {
           <button className="close-button" onClick={closeModal}><i>x</i></button>
         </div>
         <form>
-          <label htmlFor="headerImg">Kuvan url</label>
+          <label htmlFor="img">Kuvan url</label>
           <input
             type="text"
-            name="headerImg"
+            name="img"
             onChange={(e) => setState({ ...state, [e.target.name]: e.target.value })}
-            value={state.headerImg}
+            value={state.img}
           />
           <label htmlFor="title">Otsikko</label>
           <input
